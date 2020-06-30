@@ -8,7 +8,8 @@ l3 = list((1, 2, 3))
 l4 = [i for i in 'hello world' if i != ' '] #каждую итерацию перебирается побуквенно hello world. буква помещается в список если не равна пробелу
 l5 = [i for i in 'hello world' if i not in ['l', 'e', ' ', 'o']]
 l6 = [i * 2 for i in 'hello world' if i not in ['l', 'e', ' ', 'o']]
-print(l2, l3, l4, l5, l6, sep='\n')
+l7 = [i for i in l]         #create list from copy l
+print(l2, l3, l4, l5, l6, l7, sep='\n')
 
 #create range
 print(type(range(3)))
