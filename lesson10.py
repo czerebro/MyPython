@@ -45,3 +45,22 @@ print(s.islower())
 #Состоит ли строка из символов в верхнем регистре
 print(s.isupper())
 
+#Добавляет разделитель  для каждого элемента и формирует строку на выходе. На вход ждет строку
+dots = '..'
+my_str = dots.join(['1', '2'])  # '1..2'
+print(my_str, type(my_str))
+my_str = dots.join('ab')  # 'a..b'
+print(my_str)
+
+l1 = list(range(1, 10))  #[int]
+l2 = list('hello')
+print(l1)
+print(l2)
+#s1 = '-'.join(str)      #error
+#Для массового приведения к строке можно воспользоваться функцией map():
+# dots.join(map(str, [100, 200])) # '100..200'
+s1 = '-'.join(map(str, l1))
+s2 = ','.join(l2)
+print(s1)
+print(s2)
+
