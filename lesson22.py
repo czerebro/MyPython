@@ -62,3 +62,8 @@ print(s1)
 #замороженое множество frozenset  - неизменяемое
 a = frozenset('hello')
 print(a)
+
+#operations at set
+s = {'apple', 'orange', 'apple', 'pear', 'orange', 'banana'}
+for i in s:
+    print(i)
