@@ -39,10 +39,10 @@ print(odd_ball(["even",10,"odd",2,"even"])) # True
 """
 
 def find_sum(n):
-    pass
+    return n
 
-find_sum(5) # return 8 (3 + 5)
-find_sum(10) # return 33 (3 + 5 + 6 + 9 + 10)
+print(find_sum(5)) # return 8 (3 + 5)
+print(find_sum(10)) # return 33 (3 + 5 + 6 + 9 + 10)
 
 
 """
@@ -50,9 +50,13 @@ find_sum(10) # return 33 (3 + 5 + 6 + 9 + 10)
 names = ["Ryan", "Kieran", "Mark", "John", "David", "Paul"] # ["Ryan", "Mark", "John", "Paul"]
 """
 
-
 def get_names(names):
-    pass
+    [names.remove(name) for name in names if len(name) != 4]
+    return names
+
+
+names = ["Ryan", "Kieran", "Mark", "John", "David", "Paul"]
+print(get_names(names))
 
 
 
