@@ -1,0 +1,34 @@
+#parser
+from bs4 import BeautifulSoup
+import urllib.request
+
+req = urllib.request.urlopen('https://www.ua-football.com/sport/')
+html = req.read()
+#print(html)
+
+soup = BeautifulSoup(html, 'html.parser')
+#print(soup)
+
+news = soup.find_all('li', class_='liga-news-item')
+#print(news)
+
+results = []
+
+for item in news:
+    title = item.find('span', class_='d-block').get_text(strip=True)
+    #print(title)
+    desc = item.find('span', class_='name-dop').get_text(strip=True)
+    #print(desc)
+    href = item.a.get('href')
+    results.append({
+        'title': title,
+        'desc': desc,
+        'href': href,
+    })
+
+f = open('news.txt', 'w', encoding='UTF-8')
+i = 1
+for item in results:
+    f.write(f'Новость № {i}\n\nНазвание: {item["title"]}\n\nОписание: {item["desc"]}\n\nCcылка: {item["href"]}\n\n***********************\n')
+    i += 1
+f.close()
