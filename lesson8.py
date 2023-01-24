@@ -48,3 +48,7 @@ stih2 = ('Раз два три\n'
          'четыре пять')
 print(stih1)
 print(stih2)
+
+# Вывод символов Unicode
+print('\u2588')
+print('\u2591')

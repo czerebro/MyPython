@@ -1,25 +1,28 @@
-#while
+# Циклы while и for
+# while
 i = 2
 while i <= 10:
-    print(i, end=' ')
-    i += 1        #i = i + 1
+    print(i, end='|')
+    i += 1  # i = i + 1
 
-print('Sergey', 'Fedorenko', sep='.')
+# sep - разделитель (' ' по умолчанию)
+# end - символ после всех объектов ('\n' по умолчанию)
+print('Sergey', 'Fedorenko', sep='.', end='|')
 
-#for + continue
+# for + continue
 s = 'Hello world'
-for l in s:                 #для каждой буквы в строке s
+for l in s:  # для каждой буквы в строке s
     if l == ' ':
         continue
-    print (f'"{l}"', end=' ')
+    print(f'"{l}"', end=' ')
 
-#for + break
+# for + break
 for i in 'Hello world':
     if i == ' ':
         break
     print(i, end=' ')
 
-#for + else
+# for + else
 for i in 'HelloWorld':
     print(i, end=' ')
 else:
