@@ -1,5 +1,5 @@
-#Вывести таблицу умножения
-#vertikal
+# Вывести таблицу умножения
+# vertikal
 '''
 for i in range(1, 11):
     for j in range(1, 11):
@@ -7,7 +7,7 @@ for i in range(1, 11):
     print('\n')
 '''
 
-#gorizontal
+# gorizontal
 """
 for x in range(1, 11):
     for y in range(1, 11):
@@ -16,7 +16,7 @@ for x in range(1, 11):
     print('\n', end='')
 """
 
-#buitiful
+# buitiful
 for x in range(1, 11):
     for y in range(1, 6):
         z = y * x
